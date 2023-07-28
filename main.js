@@ -1,3 +1,7 @@
 function test() {
-    console.log('Hello World!');
+    var files = DriveApp.getFiles();
+    while (files.hasNext()) {
+        var file = files.next();
+        console.log(file.getName());
+    }
 }
